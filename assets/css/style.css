@@ -1,12 +1,6 @@
 /*
 Estilos da página index.html
 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-    
 
 .center {
     display: center;
@@ -42,10 +36,23 @@ Estilos da página index.html
     border-radius: 50%;
 }
 .tm-social {
-     width: 50px;
-     height: 50px;
+     width: 30px;
+     height: 30px;
 }
 
 .marge {
     margin: 30px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+/*estilos da página de contato.html*/
+.ml-50 {
+    margin-left: 50px;
 }
