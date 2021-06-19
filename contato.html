@@ -24,34 +24,34 @@
         <div>
             <form>
                 <label for="nome"> Nome: </label> <br>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
                 <br>
                 <label for="email"> Email: </label> <br>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
                 <br>
                 <label for="Assunto"> Assunto: </label><br>
-                <textarea name="Assunto" id="assunto" cols="50" rows="5"></textarea>
+                <textarea name="Assunto" id="assunto" cols="50" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
                 <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
 
         <div class="ml-50">
-            <p>Avenida Paulista</p>
-            <p>São Paulo - SP</p>
+            <p>Avenida Paulista/São Paulo - SP</p>
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975844559965!2d-46.6586758857057!3d-23.561346184682904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623859083315!5m2!1spt-BR!2sbr"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa">
             </iframe>
         </div>
     </div>
 
     <hr>
-    <footer>
+    <footer class="body">
         <div class="container">
             <a href="https://www.facebook.com/victoria.v.alves.5/">
                 <img class="tm-social p-30" src="assets/img/facebook.png" alt="Logo do Facebook">
@@ -64,10 +64,13 @@
             </a>
         </div>
 
-        <p class="center">
+        <p class="center size">
             Todos os direitos reservados: Victória Alves &copy
         </p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
